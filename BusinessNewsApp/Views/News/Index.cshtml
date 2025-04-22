@@ -1,0 +1,12 @@
+﻿@model List<BusinessNewsApp.Models.Article>
+
+<h2>Top Business News</h2>
+
+@foreach (var article in Model)
+{
+    <div style="margin-bottom: 20px;">
+        <h3>@article.Title</h3>
+        <p><strong>Source:</strong> @article.Source?.Name</p>
+        <a href="@article.Url" target="_blank">Read full article</a>
+    </div>
+}
